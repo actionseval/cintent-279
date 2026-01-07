@@ -38,8 +38,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
+      # # CINTENT >> INSERT_CINTENT
+      # - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -59,10 +59,10 @@ jobs:
         run: |
           pytest -v -n2 --dist=loadscope --show-capture=stderr
 
-      # CINTENT >> INSERT_CINTENT
-      - name: Upload CIntent Artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: ${{ env.CINTENT_ARTIFACT_NAME }}
-          path: ${{ env.CINTENT_LOGS }}
+      # # CINTENT >> INSERT_CINTENT
+      # - name: Upload CIntent Artifacts
+      #   uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: ${{ env.CINTENT_ARTIFACT_NAME }}
+      #     path: ${{ env.CINTENT_LOGS }}
